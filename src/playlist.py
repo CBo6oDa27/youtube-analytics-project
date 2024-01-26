@@ -8,8 +8,7 @@ class PlayList:
 
         self.__youtube = self.get_service()
         self.__playlist_id = playlist_id
-        self.playlist_videos = self.__youtube.playlistItems().list(
-            playlistId=self.__playlist_id, part="contentDetails,snippet", maxResults=50,).execute()
+        self.playlist_videos = self.__youtube.playlistItems().list(playlistId=self.__playlist_id, part="contentDetails,snippet", maxResults=50,).execute()
         self.channel_id = self.playlist_videos['items'][0]['snippet']['channelId']
         self.title = self.get_title(self.channel_id, self.__playlist_id, self.__youtube)
         self.__url = f'https://www.youtube.com/playlist?list={self.__playlist_id}'
