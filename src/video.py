@@ -34,3 +34,6 @@ class PLVideo(Video):
     def __init__(self, id_video, id_playlist):
         super().__init__(id_video)
         self.id_playlist = id_playlist
+
+class NoVideoError(Exception):
+    pass
