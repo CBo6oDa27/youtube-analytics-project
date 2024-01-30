@@ -14,5 +14,5 @@ if __name__ == '__main__':
     print(moscowpython >= highload)  # False
     print(moscowpython < highload)  # True
     print(moscowpython <= highload)  # True
-    print(moscowpython == highload)  # False
+    print(moscowpythonoscowpython == highload)  # False
     

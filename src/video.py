@@ -13,7 +13,7 @@ class Video():
                 raise NoVideoError
 
         except NoVideoError as e:
-            print('Видео с таким  ID  не существует')
+            print('Видео с таким ID не существует')
             self.id_video = id_video
             self.title = None
             self.url = None
@@ -34,3 +34,6 @@ class PLVideo(Video):
     def __init__(self, id_video, id_playlist):
         super().__init__(id_video)
         self.id_playlist = id_playlist
+
+class NoVideoError(Exception):
+    pass
